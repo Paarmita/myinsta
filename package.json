@@ -1,0 +1,9 @@
+{
+  "name": "myinsta",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1"
+  }
+}
