@@ -93,13 +93,13 @@ app/assets
   ```Contains subdirectories for images, stylesheets, and JavaScript files.```
 
 app/controllers
-  ```Holds controllers that should be named like weblogs_controller.rb for
+  ``` Holds controllers that should be named like weblogs_controller.rb for
   automated URL mapping. All controllers should descend from
   ApplicationController which itself descends from ActionController::Base.
   ```
 
 app/models
-  ```Holds models that should be named like post.rb. Models descend from
+  ``` Holds models that should be named like post.rb. Models descend from
   ActiveRecord::Base by default.```
 ```
 app/views
@@ -116,7 +116,7 @@ app/views/layouts
   layout.
  ```
 app/helpers
-  ```Holds view helpers that should be named like weblogs_helper.rb. These are
+  ``` Holds view helpers that should be named like weblogs_helper.rb. These are
   generated for you automatically when using generators for controllers.
   Helpers can be used to wrap functionality for your views into methods.
 ```
@@ -143,7 +143,8 @@ public
   server.
 ```
 script
-```  Helper scripts for automation and generation.```
+``` Helper scripts for automation and generation.
+```
 test
 ```  Unit and functional tests along with fixtures. When using the rails generate
   command, template test files will be generated for you and placed in this
