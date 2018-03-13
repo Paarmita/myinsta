@@ -1,2 +1,7 @@
 // indentation matter 
-%h1 Placeholder!
+// use @pics as we want all the pics
+- @pics.each do |pic|
+ %h2= link_to pic.title, pic
+
+
+ = link_to "Add pic", new_pic_path

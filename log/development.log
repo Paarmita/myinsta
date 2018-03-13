@@ -1099,3 +1099,794 @@ Completed 404 Not Found in 9ms (ActiveRecord: 1.3ms)
 ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=1):
   
 app/controllers/pics_controller.rb:35:in `find_pic'
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:01:47 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  Rendered pics/index.html.haml within layouts/application (22.8ms)
+Completed 200 OK in 912ms (Views: 904.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pics" for 127.0.0.1 at 2018-03-13 13:02:12 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  Rendered pics/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-13 13:02:16 +0530
+Processing by PicsController#new as HTML
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (173.4ms)
+  Rendered pics/new.html.haml within layouts/application (176.0ms)
+Completed 200 OK in 227ms (Views: 191.8ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/pics" for 127.0.0.1 at 2018-03-13 13:02:22 +0530
+Processing by PicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"umH3C8CUS6PhuzW6ZEBDHk9DFg9dpR5A+1CKAQcx+LPe4/m54Vzgn4OaHA1fDNuN6ys2W1ZgDn3nDO9xpizMng==", "pic"=>{"title"=>"evrvr", "discription"=>"regvreg"}, "commit"=>"Create Pic"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "pics" ("title", "discription", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "evrvr"], ["discription", "regvreg"], ["created_at", "2018-03-13 07:32:22.780764"], ["updated_at", "2018-03-13 07:32:22.780764"]]
+  [1m[35m (439.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pics/1
+Completed 302 Found in 445ms (ActiveRecord: 440.6ms)
+
+
+Started GET "/pics/1" for 127.0.0.1 at 2018-03-13 13:02:23 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 54ms (Views: 21.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:02:28 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  Rendered pics/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-13 13:03:12 +0530
+Processing by PicsController#new as HTML
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (13.2ms)
+  Rendered pics/new.html.haml within layouts/application (16.5ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pics" for 127.0.0.1 at 2018-03-13 13:03:18 +0530
+Processing by PicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l9VDv6ZaLJjTxtO+menFPAvMHHbdyTOQXYrhkh/JJoPzV00Nh5KHpLHn+gmipV2vr6Q8ItYMI61B1oTivtQSrg==", "pic"=>{"title"=>"ef", "discription"=>"revwrv"}, "commit"=>"Create Pic"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "pics" ("title", "discription", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ef"], ["discription", "revwrv"], ["created_at", "2018-03-13 07:33:18.852125"], ["updated_at", "2018-03-13 07:33:18.852125"]]
+  [1m[35m (239.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pics/2
+Completed 302 Found in 245ms (ActiveRecord: 240.4ms)
+
+
+Started GET "/pics/2" for 127.0.0.1 at 2018-03-13 13:03:19 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/1" for 127.0.0.1 at 2018-03-13 13:03:22 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:07:24 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  Rendered pics/index.html.haml within layouts/application (34.2ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: // indentation matter 
+    2: // use @pics as we want all the pics
+    3: - @pics.each do |pics|
+    4:   %h2= link_to pic.title, pic
+  
+app/views/pics/index.html.haml:3:in `_app_views_pics_index_html_haml__403647461451490065_69958087773800'
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:08:51 +0530
+  
+SyntaxError (/home/anami/myinsta/app/controllers/pics_controller.rb:8: unterminated regexp meets end of file
+/home/anami/myinsta/app/controllers/pics_controller.rb:8: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/pics_controller.rb:8: unterminated regexp meets end of file
+app/controllers/pics_controller.rb:8: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:09:13 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (298.0ms)
+Completed 500 Internal Server Error in 304ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pic' for #<#<Class:0x007f40c5b6cd50>:0x007f40c5b434f0>
+Did you mean?  pics
+               @pics):
+    1: // indentation matter 
+    2: // use @pics as we want all the pics
+    3: - @pics.each do |pics|
+    4:   %h2= link_to pic.title, pic
+  
+app/views/pics/index.html.haml:4:in `block in _app_views_pics_index_html_haml__403647461451490065_69958085867600'
+app/views/pics/index.html.haml:3:in `_app_views_pics_index_html_haml__403647461451490065_69958085867600'
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:09:36 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (242.9ms)
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pic' for #<#<Class:0x007f40c5b6cd50>:0x00000003d6e7e8>
+Did you mean?  pics
+               @pics):
+    1: // indentation matter 
+    2: // use @pics as we want all the pics
+    3: - @pics.each do |pics|
+    4:  %h2= link_to pic.title, pic
+  
+app/views/pics/index.html.haml:4:in `block in _app_views_pics_index_html_haml__403647461451490065_32244640'
+app/views/pics/index.html.haml:3:in `_app_views_pics_index_html_haml__403647461451490065_32244640'
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:11:41 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/2" for 127.0.0.1 at 2018-03-13 13:11:43 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:11:46 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/1" for 127.0.0.1 at 2018-03-13 13:11:47 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:11:48 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:11:48 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:42:55 +0530
+  
+SyntaxError (/home/anami/myinsta/app/controllers/pics_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+			redirect_to @pic notice: "Congrats Pic was updated"
+			                       ^):
+  
+app/controllers/pics_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:44:13 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pics/2" for 127.0.0.1 at 2018-03-13 13:44:15 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/2/edit" for 127.0.0.1 at 2018-03-13 13:44:22 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/2/edit" for 127.0.0.1 at 2018-03-13 13:44:23 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/2/edit" for 127.0.0.1 at 2018-03-13 13:44:25 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:44:26 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/2" for 127.0.0.1 at 2018-03-13 13:44:28 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:44:31 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.6ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pics/1" for 127.0.0.1 at 2018-03-13 13:44:32 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:44:37 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:44:41 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:44:41 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:44:42 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:44:42 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:44:43 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 43ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:44:43 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:44:43 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.6ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 42ms (Views: 36.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:44:44 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:44:44 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:45:02 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:45:02 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:45:03 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (1.7ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:45:03 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:45:03 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:45:03 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:45:03 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:45:04 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/edit.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:53:14 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/anami/myinsta/app/controllers/pics_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+			redirect_to @pic notice: "Congrats Pic was updated"
+			                       ^):
+  
+app/controllers/pics_controller.rb:35: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:53:36 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (15.2ms)
+Completed 200 OK in 626ms (Views: 621.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pics/2" for 127.0.0.1 at 2018-03-13 13:53:50 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pics/2/edit" for 127.0.0.1 at 2018-03-13 13:53:51 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/_form.html.haml (47.1ms)
+  Rendered pics/edit.html.haml within layouts/application (52.8ms)
+Completed 200 OK in 78ms (Views: 75.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/pics/2" for 127.0.0.1 at 2018-03-13 13:54:09 +0530
+Processing by PicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nW/f6Sk1mKkNIsSkroQt3+8jTc0GcAjjz0BYLozGGFS6xLKhnlHffZPBl6Y+Im/C7ynRx95cbaCTKyz1azgP8Q==", "pic"=>{"title"=>"second", "discription"=>"edited"}, "commit"=>"Update Pic", "id"=>"2"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "pics" SET "title" = ?, "discription" = ?, "updated_at" = ? WHERE "pics"."id" = ?[0m  [["title", "second"], ["discription", "edited"], ["updated_at", "2018-03-13 08:24:09.689095"], ["id", 2]]
+  [1m[35m (318.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pics/2
+Completed 302 Found in 326ms (ActiveRecord: 320.0ms)
+
+
+Started GET "/pics/2" for 127.0.0.1 at 2018-03-13 13:54:10 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:54:15 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pics/1" for 127.0.0.1 at 2018-03-13 13:54:16 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/1/edit" for 127.0.0.1 at 2018-03-13 13:54:19 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/_form.html.haml (14.0ms)
+  Rendered pics/edit.html.haml within layouts/application (18.2ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/pics/1" for 127.0.0.1 at 2018-03-13 13:54:34 +0530
+Processing by PicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"feoPfdIqMz7pGiO4WHx4sXNDHR2IY4JdODZXld4JVzimlArQlMZvCRZac5W/NYtaSbGLxYZPVGn+qjcTkck6Qw==", "pic"=>{"title"=>"first", "discription"=>"edited second"}, "commit"=>"Update Pic", "id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[33mUPDATE "pics" SET "title" = ?, "discription" = ?, "updated_at" = ? WHERE "pics"."id" = ?[0m  [["title", "first"], ["discription", "edited second"], ["updated_at", "2018-03-13 08:24:34.880236"], ["id", 1]]
+  [1m[35m (261.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pics/1
+Completed 302 Found in 270ms (ActiveRecord: 264.8ms)
+
+
+Started GET "/pics/1" for 127.0.0.1 at 2018-03-13 13:54:35 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 13:54:37 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 14:00:14 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pics/2" for 127.0.0.1 at 2018-03-13 14:00:16 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/pics/2" for 127.0.0.1 at 2018-03-13 14:00:21 +0530
+Processing by PicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HrLtaBlfuL2LBveWMND2VW2aTUA85CcDGgRIjJ5nFu96MOPaOJcTgekn3iELnG7GyfJtFDchNz4GWC38P3oiwg==", "id"=>"2"}
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "pics" WHERE "pics"."id" = ?[0m  [["id", 2]]
+  [1m[35m (60.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 61.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 14:00:21 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/1" for 127.0.0.1 at 2018-03-13 14:00:23 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/1" for 127.0.0.1 at 2018-03-13 14:02:14 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 14:02:18 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-13 14:02:21 +0530
+Processing by PicsController#new as HTML
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (8.3ms)
+  Rendered pics/new.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pics" for 127.0.0.1 at 2018-03-13 14:02:33 +0530
+Processing by PicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fKTZlqU13rPSm8mJtJf8JJjT0AEyngDa/gd0LyNcFtNzL2M0dtcEYoBD69wVY2MNrb7kmYXMC2uyUL/LGafGQA==", "pic"=>{"title"=>"new pic", "discription"=>"my"}, "commit"=>"Create Pic"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "pics" ("title", "discription", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "new pic"], ["discription", "my"], ["created_at", "2018-03-13 08:32:33.282757"], ["updated_at", "2018-03-13 08:32:33.282757"]]
+  [1m[35m (198.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pics/3
+Completed 302 Found in 206ms (ActiveRecord: 200.4ms)
+
+
+Started GET "/pics/3" for 127.0.0.1 at 2018-03-13 14:02:33 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 14:02:37 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/1" for 127.0.0.1 at 2018-03-13 14:02:52 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/pics/1" for 127.0.0.1 at 2018-03-13 14:02:55 +0530
+Processing by PicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kZPw+xdoWQDTk2dSEHM45Jbc853S9GUexYv4pX4vV/j1Ef5JNqDyPLGyTuUrP6B3MrTTydkxdSPZ153V3zJj1Q==", "id"=>"1"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "pics" WHERE "pics"."id" = ?[0m  [["id", 1]]
+  [1m[35m (90.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 97ms (ActiveRecord: 92.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 14:02:55 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/3" for 127.0.0.1 at 2018-03-13 14:03:53 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/pics/3" for 127.0.0.1 at 2018-03-13 14:03:56 +0530
+Processing by PicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yKFLMa+/fOZkPjt3xfeT0cpeZ4qJh2ONFrcqgXul2LSsI0WDjnfX2gYfEsD+uwtCbjZH3oJCc7AK60/x2rjsmQ==", "id"=>"3"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "pics" WHERE "pics"."id" = ?[0m  [["id", 3]]
+  [1m[35m (94.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 99ms (ActiveRecord: 95.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 14:03:56 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 14:03:58 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics" for 127.0.0.1 at 2018-03-13 14:05:03 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-13 14:05:07 +0530
+Processing by PicsController#new as HTML
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (10.4ms)
+  Rendered pics/new.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pics" for 127.0.0.1 at 2018-03-13 14:05:13 +0530
+Processing by PicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jCU8KCdaY4Ezej/c4ShvAOQBPYkfepLgCTNiA2bVMHzopzKaBpLIvVFbFmvaZPeTQGkd3RS/gt0Vbwdzx8gEUQ==", "pic"=>{"title"=>"erf", "discription"=>"erer"}, "commit"=>"Create Pic"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "pics" ("title", "discription", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "erf"], ["discription", "erer"], ["created_at", "2018-03-13 08:35:13.311654"], ["updated_at", "2018-03-13 08:35:13.311654"]]
+  [1m[35m (321.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pics/4
+Completed 302 Found in 327ms (ActiveRecord: 322.1ms)
+
+
+Started GET "/pics/4" for 127.0.0.1 at 2018-03-13 14:05:13 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 14:05:16 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-13 14:05:19 +0530
+Processing by PicsController#new as HTML
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (20.8ms)
+  Rendered pics/new.html.haml within layouts/application (23.9ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pics" for 127.0.0.1 at 2018-03-13 14:05:25 +0530
+Processing by PicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qHwE8o/zgS5LA/i8xOBY/PAhPAHzFyndGCyikCe1ZdGn975QXBFb/xnb2ullFMfVxUwImURFImxUe2l0HU61Qg==", "pic"=>{"title"=>"wfewgv", "discription"=>"wwgre"}, "commit"=>"Create Pic"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "pics" ("title", "discription", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "wfewgv"], ["discription", "wwgre"], ["created_at", "2018-03-13 08:35:25.353634"], ["updated_at", "2018-03-13 08:35:25.353634"]]
+  [1m[35m (283.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pics/5
+Completed 302 Found in 288ms (ActiveRecord: 284.3ms)
+
+
+Started GET "/pics/5" for 127.0.0.1 at 2018-03-13 14:05:25 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-13 14:05:27 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.4ms)
+
+

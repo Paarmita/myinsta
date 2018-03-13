@@ -5,6 +5,8 @@ class PicsController < ApplicationController
 	before_action :find_pic, only: [:show, :edit, :update, :destroy]
 	# find pic only when these actions occur
 	def index
+		@pics = Pic.all.order("created_at Desc")	
+		#in descending order
 	end
 
 	def show
@@ -24,11 +26,29 @@ class PicsController < ApplicationController
 			render 'new'
 		end
 	end
+
+	def edit
+	end
+
+	def update
+		if @pic.update(pic_params)
+			redirect_to @pic, notice: "Congrats Pic was updated"
+		else
+			render'edit'      #render prevents data to get lost if pic not updated
+		end
+	end 
+
+	def destroy
+		@pic.destroy
+		redirect_to root_path
+	end
+
+
 	# private methods are for internal usage within the defining class
 	private				# defining pics_params 
 
 	def pic_params
-		params.require(:pic).permit(:title, :discription)  # untl add permit to add images 
+		params.require(:pic).permit(:title, :discription)  # until add permit to add images 
 	end
 
 	def find_pic
