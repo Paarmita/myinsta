@@ -1890,3 +1890,423 @@ Processing by PicsController#index as HTML
 Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-15 21:55:00 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (47.4ms)
+Started GET "/" for 127.0.0.1 at 2018-03-15 21:55:05 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (3.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (189.2ms)
+Completed 200 OK in 3006ms (Views: 3000.4ms | ActiveRecord: 3.5ms)
+
+
+Completed 200 OK in 6857ms (Views: 6826.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pics/5" for 127.0.0.1 at 2018-03-15 21:55:14 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 92ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/5/edit" for 127.0.0.1 at 2018-03-15 21:55:17 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/_form.html.haml (185.3ms)
+  Rendered pics/edit.html.haml within layouts/application (203.8ms)
+Completed 200 OK in 242ms (Views: 225.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/pics/5" for 127.0.0.1 at 2018-03-15 21:55:20 +0530
+Processing by PicsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KbVBxlYmeLJX0k5qW5OVCYiWiH5kMekWXO4tYWqHS1UqpUxQsyVIi6d3uknJ2ADFeJ0R76EsIg1K4gPfdv997w==", "pic"=>{"title"=>"wfewgv", "discription"=>"wwgre"}, "commit"=>"Update Pic", "id"=>"5"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pics/5
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/pics/5" for 127.0.0.1 at 2018-03-15 21:55:20 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/pics/5" for 127.0.0.1 at 2018-03-15 21:55:24 +0530
+Processing by PicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fwptOkDOLM5hjrtoVwhI2AMntIqYWesY/O+6R9FiZmxfYcYJMiwAHU5vu6dmYjs4TLCSnr5fX5T+FTsdWgPCBA==", "id"=>"5"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pics" WHERE "pics"."id" = ?[0m  [["id", 5]]
+  [1m[35m (74.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms (ActiveRecord: 75.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-15 21:55:24 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180316060739)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180316060739"]]
+  [1m[35m (119.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2018-03-16 11:40:38 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (33.8ms)
+Completed 200 OK in 681ms (Views: 650.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2018-03-16 11:40:50 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/user/sign_up"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-16 11:41:08 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (327.1ms)
+Completed 200 OK in 367ms (Views: 341.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-16 11:41:15 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bVr0p/+MrFRew7jDtgsQNXTzIAPj5gvXsHR4eQyCbPmBN/YAyv729fUaAHj0/1iNr9LoQOYGnAlWyVGmebyQ8A==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 29ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-16 11:42:11 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q7A3kdLyLT2sZ7iX71GSQbPOVuT0ZOyN+Db/WLc1uKBH3TU254B3nAe+ACytpdr5aO+ep/GEe1Mei9aHwgtEqQ==", "user"=>{"email"=>"jsjj", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jsjj"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 358ms (Views: 22.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-16 11:42:30 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Julue64LOYeMI0Ziyi9Jc/i+YcjNvY6gyCwJfCAac+LKhGzcm3ljJif6/tmI2wHLI5+pi8hdGX4ukSCjVSSP6w==", "user"=>{"email"=>"jsjj@gmial.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jsjj@gmial.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jsjj@gmial.com"], ["encrypted_password", "$2a$11$GLB/XxjVCqL1Mzakr.F5E.VGfDrcwjmgZOMBYmSqZSOIdvzm1RBj6"], ["created_at", "2018-03-16 06:12:30.620490"], ["updated_at", "2018-03-16 06:12:30.620490"]]
+  [1m[35m (75.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-03-16 06:12:30.699065"], ["last_sign_in_at", "2018-03-16 06:12:30.699065"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-03-16 06:12:30.699574"], ["id", 1]]
+  [1m[35m (85.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 320ms (ActiveRecord: 162.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 11:42:30 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/4" for 127.0.0.1 at 2018-03-16 11:42:33 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  Rendered pics/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 46ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 11:42:35 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToPics (20180316061717)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "pics" ADD "user_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_pics_on_user_id" ON "pics" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180316061717"]]
+  [1m[35m (153.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pics_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pics_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" ORDER BY "pics"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "pics" SET "updated_at" = ?, "user_id" = ? WHERE "pics"."id" = ?[0m  [["updated_at", "2018-03-16 06:23:43.273289"], ["user_id", 1], ["id", 4]]
+  [1m[35m (100.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-03-16 11:57:34 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (23.2ms)
+Completed 200 OK in 505ms (Views: 490.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pics/4" for 127.0.0.1 at 2018-03-16 11:57:37 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (62.6ms)
+Completed 200 OK in 84ms (Views: 78.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 11:57:43 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-16 11:57:44 +0530
+Processing by PicsController#new as HTML
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (38.9ms)
+  Rendered pics/new.html.haml within layouts/application (46.4ms)
+Completed 200 OK in 96ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pics" for 127.0.0.1 at 2018-03-16 11:57:56 +0530
+Processing by PicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kmhAAyPiZJmFyt17k/je96u6RZ6NvqAf4Q1kLDEP+Do3UIaIGkHcfCOSIjxkgp4YW+IIsiT6VCJplVbigs1uQg==", "pic"=>{"title"=>"my love", "discription"=>"dr"}, "commit"=>"Create Pic"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (6.1ms)
+  Rendered pics/new.html.haml within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 2)):
+     7:         = pluralize(@pic.errors.count, "error")
+     8:         prevented this Pic from saving
+     9:         %ul
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12: 
+    13:   .form-group
+  
+app/views/pics/_form.html.haml:10:in `block in _app_views_pics__form_html_haml__1886300267970087911_70142669653800'
+app/views/pics/_form.html.haml:3:in `_app_views_pics__form_html_haml__1886300267970087911_70142669653800'
+app/views/pics/new.html.haml:3:in `_app_views_pics_new_html_haml__2431814297927011549_70142669711760'
+app/controllers/pics_controller.rb:26:in `create'
+Started GET "/pics/1" for 127.0.0.1 at 2018-03-16 11:58:39 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=1):
+  
+app/controllers/pics_controller.rb:55:in `find_pic'
+Started GET "/pics/1" for 127.0.0.1 at 2018-03-16 12:01:33 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=1):
+  
+app/controllers/pics_controller.rb:56:in `find_pic'
+Started GET "/" for 127.0.0.1 at 2018-03-16 12:01:38 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-16 12:01:41 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (5.4ms)
+  Rendered pics/new.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 68ms (Views: 21.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/pics" for 127.0.0.1 at 2018-03-16 12:01:45 +0530
+Processing by PicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tSewhE9ZlMgGRom6jyA00EAm0eFC+BNjzPkzyhVxSy8QH3YPdvosLaAedv14WnQ/sH6czeu8515EYQEEprPdVw==", "pic"=>{"title"=>"dc", "discription"=>"dscs"}, "commit"=>"Create Pic"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "pics" ("title", "discription", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "dc"], ["discription", "dscs"], ["created_at", "2018-03-16 06:31:45.772509"], ["updated_at", "2018-03-16 06:31:45.772509"], ["user_id", 1]]
+  [1m[35m (230.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pics/6
+Completed 302 Found in 237ms (ActiveRecord: 231.5ms)
+
+
+Started GET "/pics/6" for 127.0.0.1 at 2018-03-16 12:01:46 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-16 12:01:59 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/6" for 127.0.0.1 at 2018-03-16 12:02:06 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pics/6/edit" for 127.0.0.1 at 2018-03-16 12:02:08 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/_form.html.haml (6.5ms)
+  Rendered pics/edit.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 52ms (Views: 24.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/6" for 127.0.0.1 at 2018-03-16 12:02:09 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.7ms)
+
+
