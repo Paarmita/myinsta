@@ -6,6 +6,7 @@ This application utilizes the
 * [Haml gem](https://github.com/haml/haml): To write easy and more pleasant HTML documents
 * [simple_form gem](https://github.com/plataformatec/simple_form): Powerful way to make forms
 * [Bootstrap-sass gem](https://github.com/twbs/bootstrap-sass): For adding bootstrap
+* [Devise gem](https://github.com/plataformatec/devise): For adding user info
 
 
 ## Welcome to Rails
