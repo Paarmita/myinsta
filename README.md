@@ -7,6 +7,8 @@ This application utilizes the
 * [simple_form gem](https://github.com/plataformatec/simple_form): Powerful way to make forms
 * [Bootstrap-sass gem](https://github.com/twbs/bootstrap-sass): For adding bootstrap
 * [Devise gem](https://github.com/plataformatec/devise): For adding user info
+* [Paperclip gem](https://github.com/thoughtbot/paperclip): To manage pics in application
+After this install [ImageMagick](https://github.com/ImageMagick/ImageMagick) for Paperclip gem.
 
 
 ## Welcome to Rails
