@@ -10,6 +10,14 @@ This application utilizes the
 * [Paperclip gem](https://github.com/thoughtbot/paperclip): To manage pics in application
 After this install [ImageMagick](https://github.com/ImageMagick/ImageMagick) for Paperclip gem.
 
+## Installation
+To setup locally install the `ruby` `rails` latest versions :
+clone the repo and follow the commands:
+``` git clone https://github.com/Paarmita/myinsta.git 
+    cd myinsta
+    bundle install
+    rails s
+```
 
 ## Welcome to Rails
 
