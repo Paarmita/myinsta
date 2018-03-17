@@ -12,8 +12,10 @@ After this install [ImageMagick](https://github.com/ImageMagick/ImageMagick) for
 
 ## Installation
 To setup locally install the `ruby` `rails` latest versions :
+
 clone the repo and follow the commands:
-``` git clone https://github.com/Paarmita/myinsta.git 
+``` 
+    git clone https://github.com/Paarmita/myinsta.git 
     cd myinsta
     bundle install
     rails s
