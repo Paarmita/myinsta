@@ -1,27 +1,28 @@
+!!! 5
 %html
 %head
-	%title myInsta
-	= stylesheet_link_tag 'application', media: 'all', 'data-turbo-links-track' =>true
-	= javascript_include_tag 'application', 'data-turbolinks-track' => true
-	= csrf_meta_tags
+  %title myInsta
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  = csrf_meta_tags
 
 %body
+  %nav.navbar.navbar-inverse
+    .container
+      .navbar-brand= link_to "MyInsta", root_path
 
-	%nav.navbar.navbar-inverse
-		.container
-			.navbar-brand= link_to "MyInsta", root_path
-			
-			- if user_signed_in?
-				%ul.nav.navbar-nav.navbar-left
-					%li= link_to "Create", new_pic_path
-					%li= link_to "Settings", edit_user_registration_path
-					%li= link_to "Sign out", destroy_user_session_path, method: :delete
-			- else
-				%ul.nav.navbar-nav.navbar-left
-					%li= link_to "Join", new_user_registration_path
-					%li= link_to "Log in", new_user_session_path
+      - if user_signed_in?
+        %ul.nav.navbar-nav.navbar-left
+          %li= link_to "Add pic", new_pic_path
+          %li= link_to "Settings", edit_user_registration_path
+          %li= link_to "Sign Out", destroy_user_session_path, method: :delete
+      - else
+        %ul.nav.navbar-nav.navbar-left
+          %li= link_to "Join", new_user_registration_path
+          %li= link_to "Log In", new_user_session_path
+  .container
+    -flash.each do |name, msg|
+      =content_tag :div, msg, class: "alert alert-info"
 
-	.container
-		-flash.each do |name, msg|
-			=content_tag :div, msg, class: "alert alert-info"
-		= yield
+    = yield
+s

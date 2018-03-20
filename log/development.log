@@ -3159,3 +3159,845 @@ Migrating to AddAttachmentImageToPics (20180317105040)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/" for 127.0.0.1 at 2018-03-17 17:56:31 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 621ms (Views: 598.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pics/7" for 127.0.0.1 at 2018-03-17 17:56:37 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (31.2ms)
+Completed 200 OK in 78ms (Views: 71.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-17 17:56:38 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-17 17:56:39 +0530
+Processing by PicsController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pics' for nil:NilClass):
+  
+app/controllers/pics_controller.rb:17:in `new'
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-17 18:07:06 +0530
+Processing by PicsController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `pic' for nil:NilClass):
+  
+app/controllers/pics_controller.rb:17:in `new'
+Started GET "/pics" for 127.0.0.1 at 2018-03-17 18:07:20 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.5ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 80ms (Views: 76.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pics/1" for 127.0.0.1 at 2018-03-17 18:07:29 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=1):
+  
+app/controllers/pics_controller.rb:56:in `find_pic'
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-17 18:07:43 +0530
+Processing by PicsController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pic' for nil:NilClass):
+  
+app/controllers/pics_controller.rb:17:in `new'
+Started GET "/pics/7" for 127.0.0.1 at 2018-03-17 18:09:59 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (29.2ms)
+Completed 200 OK in 73ms (Views: 67.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-17 18:10:03 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 101ms (Views: 99.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-17 18:10:05 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 71ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-03-17 18:10:12 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2j9AngJgKgcfJgDXIas7gXTQvcJHRL1AfeQsO3fK0P6U5Mo79/LXb7kgKrhDXxITDnfO5EFQiQ22Ko6R5cg9cA==", "user"=>{"email"=>"paarmita1998@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "paarmita1998@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 162ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2j9AngJgKgcfJgDXIas7gXTQvcJHRL1AfeQsO3fK0P6U5Mo79/LXb7kgKrhDXxITDnfO5EFQiQ22Ko6R5cg9cA==", "user"=>{"email"=>"paarmita1998@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 203ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-17 18:10:15 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-17 18:10:30 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8Qk8NhqJhdcM5k8Ylyjm8E8qolzAZYd0ZrRUs0VZ3GPNB4TgZ+LAIPznRDNbxl5RyF4e1ykzL7kWqqroAk+n2A==", "user"=>{"email"=>"efjnej@gjrngr.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "efjnej@gjrngr.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "efjnej@gjrngr.co"], ["encrypted_password", "$2a$11$JMg/K5B7OA9WpPXXxceqq.oC4wGsNG9v.WdDs9Jcdar8hI0LCuzuy"], ["created_at", "2018-03-17 12:40:31.159747"], ["updated_at", "2018-03-17 12:40:31.159747"]]
+  [1m[35m (120.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-03-17 12:40:31.282975"], ["last_sign_in_at", "2018-03-17 12:40:31.282975"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-03-17 12:40:31.283527"], ["id", 4]]
+  [1m[35m (85.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 363ms (ActiveRecord: 206.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-17 18:10:31 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-17 18:10:34 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `pic' for #<User:0x007fbc607cd110>
+Did you mean?  pics):
+  
+app/controllers/pics_controller.rb:17:in `new'
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-17 18:16:45 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (13.9ms)
+  Rendered pics/new.html.haml within layouts/application (28.0ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Pic:0x007fbc583b75b0>):
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12:   .form-group
+    13:     = f.input :image, input_html: { class: 'form-control' }
+    14:   .form-group
+    15:     = f.input :title, input_html: { class: 'form-control' }
+    16:   .form-group
+  
+app/views/pics/_form.html.haml:13:in `block in _app_views_pics__form_html_haml___3208854153059258881_70223454786140'
+app/views/pics/_form.html.haml:3:in `_app_views_pics__form_html_haml___3208854153059258881_70223454786140'
+app/views/pics/new.html.haml:7:in `_app_views_pics_new_html_haml__1836568218562873247_70223454971280'
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-17 18:17:51 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (18.8ms)
+  Rendered pics/new.html.haml within layouts/application (22.4ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Pic:0x007fbc618abbd0>):
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12:   .form-group
+    13:     = f.input :image, input_html: { class: 'form-control' }
+    14:   .form-group
+    15:     = f.input :title, input_html: { class: 'form-control' }
+    16:   .form-group
+  
+app/views/pics/_form.html.haml:13:in `block in _app_views_pics__form_html_haml___3208854153059258881_70223533473640'
+app/views/pics/_form.html.haml:3:in `_app_views_pics__form_html_haml___3208854153059258881_70223533473640'
+app/views/pics/new.html.haml:7:in `_app_views_pics_new_html_haml__1836568218562873247_70223533520540'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pics_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pics_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-17 18:20:51 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (41.2ms)
+  Rendered pics/new.html.haml within layouts/application (85.7ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Pic:0x00000005915d98>):
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12:   .form-group
+    13:     = f.input :image, input_html: { class: 'form-control' }
+    14:   .form-group
+    15:     = f.input :title, input_html: { class: 'form-control' }
+    16:   .form-group
+  
+app/views/pics/_form.html.haml:13:in `block in _app_views_pics__form_html_haml__4572712481431671824_45149400'
+app/views/pics/_form.html.haml:3:in `_app_views_pics__form_html_haml__4572712481431671824_45149400'
+app/views/pics/new.html.haml:7:in `_app_views_pics_new_html_haml__3230142088473136767_45817520'
+Started GET "/pics/edit" for 127.0.0.1 at 2018-03-17 18:21:00 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=edit):
+  
+app/controllers/pics_controller.rb:56:in `find_pic'
+Started GET "/pics/delete" for 127.0.0.1 at 2018-03-17 18:21:08 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPic Load (0.1ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pic with 'id'=delete):
+  
+app/controllers/pics_controller.rb:56:in `find_pic'
+Started GET "/pics/delete/5" for 127.0.0.1 at 2018-03-17 18:21:15 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/pics/delete/5"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-17 18:21:36 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (15.0ms)
+  Rendered pics/new.html.haml within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Pic:0x00000004a56d20>):
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12:   .form-group
+    13:     = f.input :image, input_html: { class: 'form-control' }
+    14:   .form-group
+    15:     = f.input :title, input_html: { class: 'form-control' }
+    16:   .form-group
+  
+app/views/pics/_form.html.haml:13:in `block in _app_views_pics__form_html_haml__4572712481431671824_32071080'
+app/views/pics/_form.html.haml:3:in `_app_views_pics__form_html_haml__4572712481431671824_32071080'
+app/views/pics/new.html.haml:7:in `_app_views_pics_new_html_haml__3230142088473136767_38264520'
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-17 18:24:44 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (10.4ms)
+  Rendered pics/new.html.haml within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No input found for image):
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12:   .form-group
+    13:     = f.input :pics, as: :image, input_html: { class: 'form-control' }
+    14:   .form-group
+    15:     = f.input :title, input_html: { class: 'form-control' }
+    16:   .form-group
+  
+app/views/pics/_form.html.haml:13:in `block in _app_views_pics__form_html_haml__4572712481431671824_47931920'
+app/views/pics/_form.html.haml:3:in `_app_views_pics__form_html_haml__4572712481431671824_47931920'
+app/views/pics/new.html.haml:7:in `_app_views_pics_new_html_haml__3230142088473136767_48237060'
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-17 18:25:09 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (16.4ms)
+  Rendered pics/new.html.haml within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Pic:0x00000005cce930>):
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12:   .form-group
+    13:     = f.input :image, input_html: { class: 'form-control' }
+    14:   .form-group
+    15:     = f.input :title, input_html: { class: 'form-control' }
+    16:   .form-group
+  
+app/views/pics/_form.html.haml:13:in `block in _app_views_pics__form_html_haml__4572712481431671824_48324260'
+app/views/pics/_form.html.haml:3:in `_app_views_pics__form_html_haml__4572712481431671824_48324260'
+app/views/pics/new.html.haml:7:in `_app_views_pics_new_html_haml__3230142088473136767_48646160'
+Started GET "/" for 127.0.0.1 at 2018-03-19 18:56:37 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (43.7ms)
+Completed 200 OK in 774ms (Views: 738.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 18:56:40 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-19 18:56:42 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (214.0ms)
+Completed 200 OK in 267ms (Views: 255.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-19 18:57:00 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qd1O4aJFjp1FaWnq0aFDw2mXHTYK5NcYTcn+MQvMpWPqOqQuqmaUKUZhN2scxNhgAlbH0QBAtyHkANAo33nuoA==", "user"=>{"email"=>"paarmita1998@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "paarmita1998@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 388ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-19 18:57:18 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-19 18:57:25 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (49.9ms)
+Completed 200 OK in 112ms (Views: 110.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 18:57:30 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-19 18:57:34 +0530
+Processing by PicsController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pics' for nil:NilClass):
+  
+app/controllers/pics_controller.rb:17:in `new'
+Started GET "/" for 127.0.0.1 at 2018-03-19 18:57:38 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 72ms (Views: 70.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 18:57:38 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 72ms (Views: 70.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 18:57:38 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 89ms (Views: 86.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-19 18:57:40 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 74ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-19 18:58:00 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jtu56OsmvRxUQxwHN4V6ylYctZL86i/I0WpSFxcjni+NPFMn4wWnqFdLQob64OFpPd1vdfZOT/F4o3wOw5bV7A==", "user"=>{"email"=>"we@gn.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "we@gn.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "we@gn.com"], ["encrypted_password", "$2a$11$x18F8k8HIbAnaOru47zwGekT/mrZRY6dToUjB4lRWPyTYHmRyUF7a"], ["created_at", "2018-03-19 13:28:00.692418"], ["updated_at", "2018-03-19 13:28:00.692418"]]
+  [1m[35m (85.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-03-19 13:28:00.781928"], ["last_sign_in_at", "2018-03-19 13:28:00.781928"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-03-19 13:28:00.782467"], ["id", 5]]
+  [1m[35m (86.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 329ms (ActiveRecord: 173.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 18:58:00 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-19 18:58:03 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (11.7ms)
+  Rendered pics/new.html.haml within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Pic:0x007fa0ce260018>):
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12:   .form-group
+    13:     = f.input :image, input_html: { class: 'form-control' }
+    14:   .form-group
+    15:     = f.input :title, input_html: { class: 'form-control' }
+    16:   .form-group
+  
+app/views/pics/_form.html.haml:13:in `block in _app_views_pics__form_html_haml__1995421451148998559_70164332441860'
+app/views/pics/_form.html.haml:3:in `_app_views_pics__form_html_haml__1995421451148998559_70164332441860'
+app/views/pics/new.html.haml:7:in `_app_views_pics_new_html_haml___3993067822138575761_70164314838000'
+Started GET "/" for 127.0.0.1 at 2018-03-19 19:51:30 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.6ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (4.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 95.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-19 19:51:33 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (16.5ms)
+  Rendered pics/new.html.haml within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Pic:0x007fa0ce544bf8>):
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12:   .form-group
+    13:     = f.input :image, input_html: { class: 'form-control' }
+    14:   .form-group
+    15:     = f.input :title, input_html: { class: 'form-control' }
+    16:   .form-group
+  
+app/views/pics/_form.html.haml:13:in `block in _app_views_pics__form_html_haml__1995421451148998559_70164316179420'
+app/views/pics/_form.html.haml:3:in `_app_views_pics__form_html_haml__1995421451148998559_70164316179420'
+app/views/pics/new.html.haml:7:in `_app_views_pics_new_html_haml___3993067822138575761_70164316536600'
+Started GET "/users/edit" for 127.0.0.1 at 2018-03-19 19:51:39 +0530
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-03-19 19:51:43 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"b3yaeI0Sssgbrl4beHhmEbWH1Z2I5nTypVklZnKljOk50WybpJm/gYrjiJFCGrSt0fTruYqoDAxzIdpDFl009A=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 25ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 19:51:43 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 57ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/4" for 127.0.0.1 at 2018-03-19 19:51:46 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 124ms (Views: 43.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 19:51:48 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pics/4" for 127.0.0.1 at 2018-03-19 19:51:49 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pics/4/edit" for 127.0.0.1 at 2018-03-19 19:51:50 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/_form.html.haml (16.3ms)
+  Rendered pics/edit.html.haml within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Pic:0x007fa0dc39d378>):
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12:   .form-group
+    13:     = f.input :image, input_html: { class: 'form-control' }
+    14:   .form-group
+    15:     = f.input :title, input_html: { class: 'form-control' }
+    16:   .form-group
+  
+app/views/pics/_form.html.haml:13:in `block in _app_views_pics__form_html_haml__1995421451148998559_70164432904240'
+app/views/pics/_form.html.haml:3:in `_app_views_pics__form_html_haml__1995421451148998559_70164432904240'
+app/views/pics/edit.html.haml:7:in `_app_views_pics_edit_html_haml__2697217438085279456_70164433125140'
+Started GET "/pics/4" for 127.0.0.1 at 2018-03-19 19:51:54 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 72ms (Views: 69.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pics/4" for 127.0.0.1 at 2018-03-19 19:51:54 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 91ms (Views: 88.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pics/4" for 127.0.0.1 at 2018-03-19 19:51:55 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 76ms (Views: 72.4ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/pics/4" for 127.0.0.1 at 2018-03-19 19:51:57 +0530
+Processing by PicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"o0lTKb04WsB4b8bxuT7U8Nl2HfpoplPkNlemNLoAC27q7OeGd2FY/Rsg8Ou4ffuoa3i030peON2NscTVJBij5g==", "id"=>"4"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "pics" WHERE "pics"."id" = ?[0m  [["id", 4]]
+  [1m[35m (97.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 102ms (ActiveRecord: 97.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 19:51:57 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.4ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pics/7" for 127.0.0.1 at 2018-03-19 19:51:59 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPic Load (0.3ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 78ms (Views: 75.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pics/7/edit" for 127.0.0.1 at 2018-03-19 19:52:01 +0530
+Processing by PicsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering pics/edit.html.haml within layouts/application
+  Rendered pics/_form.html.haml (28.3ms)
+  Rendered pics/edit.html.haml within layouts/application (34.1ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Pic:0x007fa0cdf21fc8>):
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12:   .form-group
+    13:     = f.input :image, input_html: { class: 'form-control' }
+    14:   .form-group
+    15:     = f.input :title, input_html: { class: 'form-control' }
+    16:   .form-group
+  
+app/views/pics/_form.html.haml:13:in `block in _app_views_pics__form_html_haml__1995421451148998559_70164330590660'
+app/views/pics/_form.html.haml:3:in `_app_views_pics__form_html_haml__1995421451148998559_70164330590660'
+app/views/pics/edit.html.haml:7:in `_app_views_pics_edit_html_haml__2697217438085279456_70164313342600'
+Started GET "/pics/7" for 127.0.0.1 at 2018-03-19 19:52:03 +0530
+Processing by PicsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering pics/show.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pics/show.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/pics/7" for 127.0.0.1 at 2018-03-19 19:52:06 +0530
+Processing by PicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oA1OHnzfL8EsXUep+zfHunLmUtEthVl1XK80c2ycspLpqPqxtoYt/E8ScbP6dOjiwOj79A99MkznSVaS8oQaGg==", "id"=>"7"}
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT  "pics".* FROM "pics" WHERE "pics"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "pics" WHERE "pics"."id" = ?[0m  [["id", 7]]
+  [1m[35m (115.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 119ms (ActiveRecord: 116.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 19:52:06 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-19 19:52:09 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-19 19:52:23 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ry9YXWMQNiohsTIuybAFsrSKmNnpPqeIYyMvc/A7BYggPgeXpzLfFUsUicAjEE9gcW7vl2hgctC1GDKCCRYemQ==", "user"=>{"email"=>"qwew@frbr.cb", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qwew@frbr.cb"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "qwew@frbr.cb"], ["encrypted_password", "$2a$11$QVCb94F4rghnhAZb4J5kRuPekYHu2DL22wPD9qLLubxLe0so8o4JS"], ["created_at", "2018-03-19 14:22:23.234409"], ["updated_at", "2018-03-19 14:22:23.234409"]]
+  [1m[35m (114.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-03-19 14:22:23.350789"], ["last_sign_in_at", "2018-03-19 14:22:23.350789"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-03-19 14:22:23.351316"], ["id", 6]]
+  [1m[35m (55.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 325ms (ActiveRecord: 170.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-19 19:52:23 +0530
+Processing by PicsController#index as HTML
+  Rendering pics/index.html.haml within layouts/application
+  [1m[36mPic Load (0.2ms)[0m  [1m[34mSELECT "pics".* FROM "pics" ORDER BY created_at Desc[0m
+  Rendered pics/index.html.haml within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-19 19:52:26 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (17.6ms)
+  Rendered pics/new.html.haml within layouts/application (21.5ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Pic:0x007fa0dc1d64e0>):
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12:   .form-group
+    13:     = f.input :image, input_html: { class: 'form-control' }
+    14:   .form-group
+    15:     = f.input :title, input_html: { class: 'form-control' }
+    16:   .form-group
+  
+app/views/pics/_form.html.haml:13:in `block in _app_views_pics__form_html_haml__1995421451148998559_70164431953560'
+app/views/pics/_form.html.haml:3:in `_app_views_pics__form_html_haml__1995421451148998559_70164431953560'
+app/views/pics/new.html.haml:7:in `_app_views_pics_new_html_haml___3993067822138575761_70164432177920'
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-19 19:57:20 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (1.3ms)
+  Rendered pics/new.html.haml within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 3 spaces used for indentation, but the rest of the document was indented using 2 spaces.):
+    10:           - @pic.errors.full_message.each do |msg|
+    11:             %li= msg
+    12:   //.form-group
+    13:    // = f.input :image, input_html: { class: 'form-control' }
+    14:   .form-group
+    15:     = f.input :title, input_html: { class: 'form-control' }
+    16:   .form-group
+  
+app/views/pics/_form.html.haml:13
+app/views/pics/new.html.haml:7:in `_app_views_pics_new_html_haml___3993067822138575761_70164311297320'
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-19 19:57:43 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (16.9ms)
+  Rendered pics/new.html.haml within layouts/application (20.7ms)
+Completed 200 OK in 92ms (Views: 89.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pics/new" for 127.0.0.1 at 2018-03-19 19:57:47 +0530
+Processing by PicsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering pics/new.html.haml within layouts/application
+  Rendered pics/_form.html.haml (5.6ms)
+  Rendered pics/new.html.haml within layouts/application (446.9ms)
+Completed 200 OK in 491ms (Views: 486.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/pics" for 127.0.0.1 at 2018-03-19 19:57:53 +0530
+Processing by PicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p+Cdn83BqRCAbhKg0bWdNoQa29wGEE5pPafrxMLRQcVRzNrXbAP4nkzGtaNPXCjN1AKS/ueCIZxbwd2//2nVEQ==", "pic"=>{"title"=>"verfe", "discription"=>"eavearv"}, "commit"=>"Create Pic"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `avatar_content_type' for #<Pic:0x007fa0cda6eaf8>):
+  
+app/controllers/pics_controller.rb:24:in `create'
