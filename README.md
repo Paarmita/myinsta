@@ -1,5 +1,5 @@
 # myInsta
-Instagram app in ruby on rails
+Instagram web app with basic featurures in ruby on rails
 
 ## Dependencies
 This application utilizes the 
@@ -9,8 +9,8 @@ This application utilizes the
 * [Devise gem](https://github.com/plataformatec/devise): For adding user info
 * [Paperclip gem](https://github.com/thoughtbot/paperclip): To manage pics in application
 After this install [ImageMagick](https://github.com/ImageMagick/ImageMagick) for Paperclip gem.
-* [ gem](https://github.com/thoughtbot/paperclip): To manage pics in application
-* [Paperclip gem](https://github.com/thoughtbot/paperclip): To manage pics in application
+* [masonry-rails gem](https://github.com/kristianmandrup/masonry-rails): To add jquery to indent photos
+* [acts_as_votable gem](https://github.com/ryanto/acts_as_votable): To add voting feature
 
 ## Installation
 To setup locally install the `ruby` `rails` latest versions :
@@ -23,6 +23,10 @@ clone the repo and follow the commands:
     rake db:migrate
     rails s
 ```
+## Features
+* User can post posts, like posts.
+* User show page displays user's posts images in a 3 column grid
+* Index page shows posts created by everyone.
 
 ## Welcome to Rails
 
