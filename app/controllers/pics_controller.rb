@@ -1,7 +1,7 @@
 class PicsController < ApplicationController
     before_action :find_pic, only: [:show, :edit, :update, :destroy, :upvote]
     before_action :authenticate_user!, except: [:index, :show]
-    
+    # from devise docs to limit users
     def index
         @pics = Pic.all.order("created_at DESC")
     end
@@ -43,12 +43,14 @@ class PicsController < ApplicationController
     
     def upvote
         @pic.upvote_by current_user
-        redirect_to :back
+        # redirect_to :back
+        redirect_back fallback_location: root_path
+        # in rails 5 this is used
     end
     
     
     private
-
+    # private method as used in edit,show and other methods also
     def pic_params
         params.require(:pic).permit(:title, :description, :image)
     end

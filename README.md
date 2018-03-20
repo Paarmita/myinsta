@@ -9,6 +9,8 @@ This application utilizes the
 * [Devise gem](https://github.com/plataformatec/devise): For adding user info
 * [Paperclip gem](https://github.com/thoughtbot/paperclip): To manage pics in application
 After this install [ImageMagick](https://github.com/ImageMagick/ImageMagick) for Paperclip gem.
+* [ gem](https://github.com/thoughtbot/paperclip): To manage pics in application
+* [Paperclip gem](https://github.com/thoughtbot/paperclip): To manage pics in application
 
 ## Installation
 To setup locally install the `ruby` `rails` latest versions :
@@ -18,6 +20,7 @@ clone the repo and follow the commands:
     git clone https://github.com/Paarmita/myinsta.git 
     cd myinsta
     bundle install
+    rake db:migrate
     rails s
 ```
 
