@@ -28,6 +28,14 @@ clone the repo and follow the commands:
 * User show page displays user's posts images in a 3 column grid
 * Index page shows posts created by everyone.
 
+## Additional features to be added
+* Validations to assume user name is unique, contains no uppercase letters, and contains no whitespace
+* Password protection via BCrypt
+* User can post posts, follow users, like posts, comment on posts, etc. and also has a bio and name which are displayed on     their show page and users page
+* Image storage on AWS S3 via the paperclip gem
+
+
+
 ## Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
