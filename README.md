@@ -1,4 +1,7 @@
 # myInsta
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Paarmita/myinsta.svg)](https://greenkeeper.io/)
+
 Instagram web app with basic featurures in ruby on rails
 
 ## Dependencies
